@@ -14,4 +14,4 @@ const BottomTabnavigator = () => {
     )
 };  
 
-expot default BottomTabnavigator;
+export default BottomTabnavigator;

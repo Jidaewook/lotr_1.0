@@ -83,4 +83,4 @@ const ContactStackNavigator = ({navigation}) => {
 
 }
 
-export {MainStackNavigator, ContactStackNavigator}
+export {MainStackNavigator, ContactStackNavigator}; s
