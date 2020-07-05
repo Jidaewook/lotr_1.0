@@ -1,14 +1,14 @@
 import React from 'react';
 import {View, Text} from "react-native";
 
-const Contact = () => {
+const Post = () => {
     return (
         <View>
             <Text>
-                Contact
+                Post
             </Text>
         </View>
     );
 };
 
-export default Contact;
+export default Post;
