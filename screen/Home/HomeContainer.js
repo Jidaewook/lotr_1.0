@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, Button} from "react-native";
-import {lectureApi} from '../../api';
+import {lectureApi, noticeApi} from '../../api';
+import HomePresenter from './HomePresenter';
 
 export default () => {
 
@@ -8,18 +9,34 @@ export default () => {
         nce: [],
         psat: [],
         ncsError: null,
-        psatError: null
+        psatError: null, 
+        loading: null
     });
+
+    const [notices, setNotices] = useState({
+        notice: [],
+        noticeError: null,
+        loading: null
+    });
+
 
     const getData = async () => {
         const [ncs, ncsError] = await lectureApi.ncs();
         const [psat, psatError] = await lectureApi.psat();
+        const [notice, noticeError] = await noticeApi.notice();
 
         setLectures({
             ncs,
             ncsError,
             psat,
-            psatError
+            psatError,
+            loading: false
+        });
+
+        setNotices({
+            notice, 
+            noticeError,
+            loading: false
         });
     };
 
@@ -28,15 +45,6 @@ export default () => {
         getData();
     }, []);
 
-    return (
-        <View style={{flex: 1, backgroundColor: "white"}}>
-            <Text style={{color: "black"}}>
-                ncsCount is : {lectures.ncs?.length}
-            </Text>
-            <Text style={{color: "black"}}>
-                psatCount is : {lectures.psat?.length}
-            </Text>
-        </View>
-    )
+    return (<HomePresenter />);
 
 };
