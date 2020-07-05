@@ -11,12 +11,6 @@ import {
 
 } from "./StackNavigator";
 
-import Home from '../screen/Home';
-import Post from '../screen/Post';
-import Search from '../screen/Search';
-import Activity from '../screen/Activity';
-import Mypage from '../screen/Mypage';
-
 
 const Tabs = createBottomTabNavigator();
 
