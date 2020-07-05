@@ -5,7 +5,7 @@ import Home from "../screen/Home";
 import Contact from "../screen/Contact";
 import About from "../screen/About";
 import Icon from "react-native-vector-icons/Ionicons";
-import { StackActions } from '@react-navigation/native';
+
 
 const stack = createStackNavigator();
 
@@ -83,4 +83,4 @@ const ContactStackNavigator = ({navigation}) => {
 
 }
 
-export {MainStackNavigator, ContactStackNavigator}; s
+export {MainStackNavigator, ContactStackNavigator};

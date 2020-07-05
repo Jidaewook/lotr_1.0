@@ -1,13 +1,13 @@
 import React from 'react';
 import {NavigationContainer} from "@react-navigation/native";
-import { NativeViewGestureHandler } from 'react-native-gesture-handler';
 
+import DrawerNavigator from "./navigation/DrawerNavigator";
 
 
 const App = () => {
   return (
     <NavigationContainer>
-      
+      <DrawerNavigator />
     </NavigationContainer>
   );
 };
