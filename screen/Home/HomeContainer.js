@@ -38,6 +38,7 @@ export default () => {
             noticeError,
             loading: false
         });
+        console.log(psat);
     };
 
 
@@ -45,6 +46,6 @@ export default () => {
         getData();
     }, []);
 
-    return (<HomePresenter />);
+    return <HomePresenter {...lectures} />;
 
 };

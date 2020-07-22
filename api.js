@@ -1,13 +1,14 @@
 import axios from "axios";
 
 const makeRequest = (path) => 
+    // axios.get(`http://localhost:5000${path}`);   
     axios.get(`https://pure-retreat-35508.herokuapp.com${path}`);
 
 const getAnything = async (path, params = {}) => {
     try{
         const {
             data: { results },
-            data
+            data 
         } = await makeRequest(path, params);
         return [results || data, null];
     } catch (e) {
